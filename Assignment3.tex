@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\title{COMP 550 – Algorithms and Analysis}
+\author{Spring 2023-Assignment03}
+\date{  Issue Date: February 20, 2023 
+        $\vspace{0.5cm}$
+        \\Due Date: Monday, February 27, 11:55 pm
+        $\vspace{0.5cm}$
+        \\ Marks: 5
+        \\
+        $\vspace{1cm}$
+        \\ Student Name:$\rule[-5pt]{8.2cm}{0.05em}$ 
+        $\vspace{1cm}$
+        \\ Student PID:$\rule[-5pt]{8.2cm}{0.05em}$ }
+
+\begin{document}
+
+\maketitle
+\begin{center}
+\textbf{Submission:}
+\end{center}
+\begin{itemize}
+    \item \textbf{You must upload your submission(s) before the deadline in Gradescope.}
+    \item \textbf{Please ensure that your answers are within the given space allocated after the question.}
+\end{itemize}
+
+$\vspace{0.2cm}$
+
+\begin{center}
+\textbf{Rules for ALL HWs}:
+\end{center}
+You are encouraged to \textit{\underline{\textbf{discuss}}} the homework assignments and study together in groups, but when it comes to formulating/writing solutions \textit{\underline{\textbf{you must work}}} \textit{\underline{\textbf{alone and independently}}}. If required, you should be able to explain your answer clearly to TAs/LAs. Copying homework solutions from another student, from the  Internet, solution sets of friends, or other  sources will be considered cheating and treated accordingly.
+\newpage
+
+\section{Asymptotic notation}
+
+\doublespacing
+\begin{enumerate}
+    \item Prove that if $f(n) \in O(g(n))$ then $g(n) \in \Omega(f(n))$
+    \newpage
+    \item Prove that $o(f(n)) \cap \omega(f(n)) = \emptyset$
+    \newpage
+\end{enumerate}
+
+\section{Substitution method}
+\begin{enumerate}
+    \item  $T(n)=3T(\frac{n}{\sqrt{2}})+O(n^4)$ First use the master method to find the Upper bound(find $O$), and then use the Substitution method to prove it is correct. 
+    \begin{equation*}
+  T(n) =
+    \begin{cases}
+      3T(\frac{n}{\sqrt{2}})+O(n^4) & n\geq 2\\
+      1 & n<2
+    \end{cases}       
+\end{equation*}
+    \newpage
+\end{enumerate}
+
+\section{Probability}
+\begin{enumerate}
+    \item Consider a jar with white and black balls, where the  number of black balls is even. We are given that the probability that two balls, picked at random from the jar, are both white is $\frac{1}{2}$. Calculate the minimum number of balls in the jar.
+    \newpage
+    \item Suppose there are $A$ black balls and $B$ white balls in a jar. We randomly pick a ball from the jar until we have a white ball. Denote $X$ as the number of balls we have picked.
+    \begin{enumerate}
+        \item Now supposes each time we pick up the ball \textbf{ we put it back}. What would be the distribution and expectation of $X$? (The distribution is the general formula for $P(x=k)$ for each $k \in \mathbb{N}$. And please derive the expectation from the definition).
+        \newpage
+        \
+        \newpage
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
