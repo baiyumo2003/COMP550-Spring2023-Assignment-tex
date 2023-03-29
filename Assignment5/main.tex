@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{listings}
+
+\title{COMP 550 – Algorithms and Analysis}
+\author{Spring 2023-Assignment05}
+\date{  Issue Date: March 29, 2023 
+        $\vspace{0.5cm}$
+        \\Due Date: Wednesday, April 5, 11:55 pm
+        $\vspace{0.5cm}$
+        \\ Marks: 5
+        \\
+        $\vspace{1cm}$
+        \\ Student Name:$\rule[-5pt]{8.2cm}{0.05em}$ 
+        $\vspace{1cm}$
+        \\ Student PID:$\rule[-5pt]{8.2cm}{0.05em}$ }
+
+\begin{document}
+
+\maketitle
+\begin{center}
+\textbf{Submission:}
+\end{center}
+\begin{itemize}
+    \item \textbf{You must upload your submission(s) before the deadline in Gradescope.}
+    \item \textbf{Please ensure that your answers are within the given space allocated after the question.}
+\end{itemize}
+
+$\vspace{0.2cm}$
+
+\begin{center}
+\textbf{Rules for ALL HWs}:
+\end{center}
+You are encouraged to \textit{\underline{\textbf{discuss}}} the homework assignments and study together in groups, but when it comes to formulating/writing solutions \textit{\underline{\textbf{you must work}}} \textit{\underline{\textbf{alone and independently}}}. If required, you should be able to explain your answer clearly to TAs/LAs. Copying homework solutions from another student, from the  Internet, solution sets of friends, or other  sources will be considered cheating and treated accordingly.
+\newpage
+
+\section{Minimum Spanning Tree}
+\doublespacing
+\begin{enumerate}
+    \item For each of the following statements decides whether they are correct. If it is incorrect, provide a counter-example. \\
+    Assume $G=(V,E)$ is undirected and connected. Do not assume the edge weights are distinct unless specifically stated.
+    \begin{enumerate}
+        \item let $e$ be any edge of minimum weight in $G$. Then $e$ must be part of some MST.
+        \item If $G$ has a cycle with a unique lightest edge $e$, then $e$ must be part of every MST.
+        \item For any $r > 0$, define an r-path as a path whose edges all have a weight less than $r$. If $G$ contains an r-path from $s$ to $t$, then every MST of $G$ must also contain an r-path from $s$ to $t$.
+    \end{enumerate}
+    \newpage
+    \
+    \\
+    \newpage
+
+    \item Consider $G=(V,E)$ is undirected and connected. Prove that If $e$ is part of some MST of $G$, then it must be the lightest edge across some cut of $G$.
+    \newpage
+    
+
+
+    \item Is the algorithm correct? If so, prove it. Otherwise, give a counterexample and explain why it doesn’t work.
+    \begin{algorithm}
+    \caption{FindMST ($G$:graph on $n$ vertices)}\label{alg:cap}
+    \begin{algorithmic}
+    \If{n=1}  \textbf{return the empty set}
+    \EndIf
+    \State $T_1 \gets $ FindMST($G1$: subgraph of $G$ induced on vertices $\{ 1,2\dots \frac{n}{2}\}$)
+    \State $T_2 \gets $ FindMST($G2$: subgraph of $G$ induced on vertices $\{\frac{n}{2}+1,\dots n\}$)
+    \State $e \gets $ cheapest edge across the cut $\{1,2\dots \frac{n}{2}\}$ and $\{\frac{n}{2}+1,\dots n\}$.\\
+    \textbf{return $T_1 \cup T_2 \cup \{e\}$}
+    \end{algorithmic}
+    \end{algorithm}
+    \newpage
+
+
+    
+    
+\end{enumerate}
+    \section{Bellman-Ford}
+    \begin{enumerate}
+        \item Let $G=(V,E)$ be a \textbf{directed} graph. Under what condition does the Bellman-Ford algorithm return the same shortest path tree (from source $s \in V$) regardless of the ordering on edges? (That is if this condition is satisfied, it is guaranteed that Bellman-Ford will return the same path tree)
+    \end{enumerate}
+
+\end{document}
