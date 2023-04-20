@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{listings}
+
+\title{COMP 550 – Algorithms and Analysis}
+\author{Spring 2023-Assignment07}
+\date{  Issue Date: April 19, 2023 
+        $\vspace{0.5cm}$
+        \\Due Date: Wednesday, April 26, 11:55 pm
+        $\vspace{0.5cm}$
+        \\ Marks: 5
+        \\
+        $\vspace{1cm}$
+        \\ Student Name:$\rule[-5pt]{8.2cm}{0.05em}$ 
+        $\vspace{1cm}$
+        \\ Student PID:$\rule[-5pt]{8.2cm}{0.05em}$ }
+
+\begin{document}
+
+\maketitle
+\begin{center}
+\textbf{Submission:}
+\end{center}
+\begin{itemize}
+    \item \textbf{You must upload your submission(s) before the deadline in Gradescope.}
+    \item \textbf{Please ensure that your answers are within the given space allocated after the question.}
+\end{itemize}
+
+$\vspace{0.2cm}$
+
+\begin{center}
+\textbf{Rules for ALL HWs}:
+\end{center}
+You are encouraged to \textit{\underline{\textbf{discuss}}} the homework assignments and study together in groups, but when it comes to formulating/writing solutions \textit{\underline{\textbf{you must work}}} \textit{\underline{\textbf{alone and independently}}}. If required, you should be able to explain your answer clearly to TAs/LAs. Copying homework solutions from another student, from the  Internet, solution sets of friends, or other  sources will be considered cheating and treated accordingly.
+\newpage
+
+\section{Design an algorithm }
+\doublespacing
+\begin{enumerate}
+    \item Fix a set of positive integers called denominations $x_1,x_2 \dots x_n$. The problem you want to solve for these denominations is the following: \\
+    Given an integer $A$, express it as:
+    $$A=\sum_{i=1}^{n}a_ix_i$$
+    for some nonnegative integers $a_1,\dots a_n \geq 0$
+    \begin{enumerate}
+        \item Under which condition on the denominations $x_i$ are you able to do this for all integers $A>0$?
+        \newpage
+        % \item Suppose that you want, Given $A$, to find the nonnegative $a_i's $ that satisfy $A=\sum_{i=1}^{n}a_ix_i$ and such that the sum of all $a_i's $ is minimal ($\min\sum_{i=1}^{n}a_i$). Design a greedy algorithm for this problem, and provide a set of denominations and an $A$ where your algorithm failed. (Your greedy algorithm may not necessarily solve the problem) 
+        % \newpage
+
+        \item  Show that greedy algorithm finds optimum $a_i's $ in the case of the denominations are 1,5,10, and 25, for any amount $A$.(Hint: Try to prove by contradiction)
+        \newpage
+    \end{enumerate}
+    \item We call a sequence of $n$ integers $x_1,\dots, x_n$ valid if each $x_i$ is in $\{1,\dots ,m\}$
+    \begin{enumerate}
+        \item Give a dynamic programming-based algorithm that takes $n,m$ and "Target" $T$ as input and outputs the number of distinct valid sequences such that $x_1+x_2+\dots x_n=T$. Your algorithm should run in $O(m^2n^2)$
+        \newpage
+        \item Give an algorithm in part (a) that runs in $O(mn^2)$\\
+        (Hint: let $f(s, i)$ denote the number of length-i valid sequences with sum equal to $s$. Consider defining the function $g(s,i):=\sum_{t=1}^{s}f(t,i)$)
+        \newpage
+        \end{enumerate}
+\end{enumerate}
+
+\end{document}
